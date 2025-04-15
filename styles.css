@@ -7,10 +7,15 @@ body,div,ul,li,a,h1,h2,h3,h4{
     padding: 0;
 }
 
+label, .sidebar__nav{
+    user-select: none;
+}
+
 body{
     --bg-color: color-mix(in srgb, rgb(103, 152, 103) 90%, #fff);
     --sidebar-color: #fff;
     --dark-color: rgb(3, 54, 17);
+    --text_color: #333;
     background-color: var(--bg-color);
     font-family: monospace;
 }
@@ -95,6 +100,7 @@ body{
 
 .sidebar__picture{
     margin-left: 1.5rem;
+    padding-left: 1.5rem;
     position: relative;
     z-index: 10;
 }
@@ -107,7 +113,97 @@ body{
 
 /* SIDEBAR PROFILE MENU STYLES */
 
+.sidebar__profile{
+    padding: 12px;
+}
+
+.sidebar__profile img{
+    border-radius: 50%;
+    width: 2rem;
+}
+
+.sidebar__profile li > span{
+    font-size: 1.5rem;
+    color: var(--dark-color);
+}
+
+input[type="checkbox"]{
+    display: none;
+}
+
 .sidebar__form{
     position: absolute;
+    z-index: 20;
+    right: -1rem;
+}
+
+.sidebar label{
+    position: relative;
+    color: var(--sidebar-color);
+    background-color: var(--bg-color);
+    font-size: 2rem;
+    border-radius: 50%;
+    padding: .4rem;
+    user-select: none;
+}
+
+.sidebar label::before{
+    content: "";
+    background-color: var(--bg-color);
+    position: absolute;
+    width: 13px;
+    height: 25px;
+    background-color: transparent;
+}
+.sidebar label::after{
+    content: "";
+    background-color: var(--bg-color);
+    position: absolute;
+    width: 13px;
+    height: 25px;
+    background-color: transparent;
+}
+
+.sidebar label::before{
+    top: -25px;
+    left: 19px;
+    border-bottom-right-radius: 25px;
+    box-shadow: 4px 4px 0 4px var(--bg-color);
+}
+.sidebar label::after{
+    bottom: -25px;
+    left: 19px;
+    border-top-right-radius: 25px;
+    box-shadow: 4px -4px 0 4px var(--bg-color);
+}
+
+input[type="checkbox"]:checked ~ label {
+    color: var(--bg-color);
+    background-color: var(--sidebar-color);
+}
+
+input[type="checkbox"]:checked ~ label::after,
+input[type="checkbox"]:checked ~ label::before {
+    display: none;
+}
+
+.sidebar:has(input[type="checkbox"]:checked){
+    width: fit-content;
+}
+
+.sidebar:has(input[type="checkbox"]:checked) picture{
+    width: fit-content;
+    margin-left: .75rem;
+}
+
+.sidebar:has(input[type="checkbox"]:checked) a{
+    display: none;
+}
+
+.sidebar:has(input[type="checkbox"]:checked) .sidebar__profile span{
+    display: none;
+}
+
+.sidebar:has(input[type="checkbox"]:checked) .sidebar__picture img{
     display: none;
 }
