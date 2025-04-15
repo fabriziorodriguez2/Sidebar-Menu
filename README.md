@@ -18,6 +18,6 @@ Practicar estructura básica de una página web, aprender a posicionar elementos
 Vista previa
 (Poner imagen)
 
-Cómo usar
-Clonar el repositorio
+Cómo usar/n
+Clonar el repositorio/n
 Abrir el archivo index.html en tu navegador
