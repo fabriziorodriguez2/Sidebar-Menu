@@ -113,7 +113,14 @@ body{
 
 /* SIDEBAR PROFILE MENU STYLES */
 
-.sidebar__profile{
+.sidebar__profile ul > li > a{
+    padding: 12px;
+    text-decoration: none;
+    color: var(--dark-color);
+    font-size: 1.5rem;
+}
+
+.sidebar__profile ul > li{
     padding: 12px;
 }
 
@@ -125,6 +132,10 @@ body{
 .sidebar__profile li > span{
     font-size: 1.5rem;
     color: var(--dark-color);
+}
+
+.sidebar-item__profile{
+    font-size: 2rem;
 }
 
 input[type="checkbox"]{
