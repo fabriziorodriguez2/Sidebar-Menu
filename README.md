@@ -16,8 +16,8 @@ Objetivo del proyecto
 Practicar estructura básica de una página web, aprender a posicionar elementos y mejorar el diseño visual con CSS puro.
 
 Vista previa
-(Poner imagen)
+![image](https://github.com/user-attachments/assets/b1c90ed0-f6db-4ec0-9dc7-e7fa175df1ee)
 
-Cómo usar/n
-Clonar el repositorio/n
-Abrir el archivo index.html en tu navegador
+
+Cómo usar                                                                                                                                                                                                        
+Clonar el repositorio                                                                                                                                                                                             Abrir el archivo index.html en tu navegador
